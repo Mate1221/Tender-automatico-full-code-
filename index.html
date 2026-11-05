@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Tender automático</title>
+</head>
+<body>
+    <main>
+        <h1 class="title">Tender Automático</h1>
+        <h2 class="h2"><span class="estado_tender">Seco</span></h2>
+        <div class="game-container">
+            <div class="btn_color"></div>
+            
+            <div class="switch_button">
+                <input type="checkbox" name="switch_button" id="switch_label" aria-label="Interruptor" class="switch_button__checkbox">
+                <label for="switch_label" class="switch_button__label"></label>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">©CopyRight 2030 Mateo Mucci</footer>
+
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
