@@ -1,0 +1,154 @@
+:root {
+    --color-green: #39d467;
+    --color-red: #ce1d1d;
+    --color-button: #fdffff;
+    --color-black: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background-color: #ffe1b9;
+}
+
+/* El main distribuye los títulos y el contenedor al centro */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Exo 2", sans-serif;
+}
+
+.h2 {
+    text-align: center;
+    font-size: 35px;
+    font-family: "Exo 2", sans-serif;
+}
+
+/* Contenedor que fuerza al círculo y al switch a alinearse uno abajo del otro */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* Espacio de separación entre el círculo y el switch */
+    width: 100%;
+}
+
+.btn_color {
+    height: 250px;
+    width: 250px;
+    background-color: #000;
+    border: transparent solid 5px;
+    border-radius: 100%;
+}
+
+.btn_color_rojo {
+    background-color: #ce1d1d;
+}
+
+.btn_color_verde {
+    background-color: #39d467;
+}
+
+.btn_color_azul {
+    background-color: #396fd4;
+}
+
+.footer {
+    background-color: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+}
+
+.switch_button {
+    display: inline-block;
+}
+
+/* Oculto visualmente, pero sigue en el teclado y en el lector de pantalla */
+.switch_button .switch_button__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* Anillo de foco sobre el botón al navegar con teclado */
+.switch_button .switch_button__checkbox:focus-visible + .switch_button__label {
+    outline: 2px solid var(--color-black);
+    outline-offset: 2px;
+}
+
+.switch_button .switch_button__label {
+    background-color: var(--color-red);
+    width: 10rem;
+    height: 5rem;
+    border-radius: 5rem;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.switch_button .switch_button__label:before {
+    transition: .2s;
+    display: block;
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--color-button);
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px var(--color-black);
+}
+
+.switch_button .switch_button__checkbox:checked + .switch_button__label {
+    background-color: var(--color-green);
+}
+
+.switch_button .switch_button__checkbox:checked + .switch_button__label:before {
+    transform: translateX(5rem);
+}
+
+@media (max-width: 270px) {
+    .btn_color {
+        height: 200px;
+        width: 200px;
+    }
+    .title {
+        font-size: 40px;
+    }
+    .h2 {
+        font-size: 35px;
+    }
+}
+
+.exo-2 {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
